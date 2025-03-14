@@ -1,0 +1,45 @@
+@import "../../styles/variables";
+
+.header {
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  background: rgba(var(--bg-color), 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .navLinks {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+
+      a {
+        color: var(--text-color);
+        transition: var(--transition);
+
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+}
+
+.dark {
+  .header {
+    background: rgba(var(--dark-bg), 0.95);
+  }
+}
