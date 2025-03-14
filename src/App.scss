@@ -1,0 +1,24 @@
+@import "./styles/variables";
+@import "./styles/mixins";
+@import "./styles/base";
+@import "./styles/animations";
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: var(--transition);
+
+  .main-content {
+    flex: 1;
+    padding: 2rem 5%;
+  }
+}
+
+// Темная тема
+.dark {
+  --text-color: #{$dark-text};
+  --bg-color: #{$dark-bg};
+}

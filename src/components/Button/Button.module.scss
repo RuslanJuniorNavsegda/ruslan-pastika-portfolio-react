@@ -1,0 +1,76 @@
+@import "../../styles/variables";
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: var(--transition);
+  border: 2px solid transparent;
+
+  // Variants
+  &.primary {
+    background: var(--primary-color);
+    color: white;
+
+    &:hover {
+      background: linear-gradient(
+        45deg,
+        var(--primary-color),
+        var(--secondary-color)
+      );
+    }
+  }
+
+  &.secondary {
+    background: rgba(var(--primary-color), 0.1);
+    color: var(--primary-color);
+    border-color: rgba(var(--primary-color), 0.3);
+
+    &:hover {
+      background: rgba(var(--primary-color), 0.2);
+    }
+  }
+
+  &.ghost {
+    background: transparent;
+    color: var(--text-color);
+
+    &:hover {
+      background: rgba(var(--text-color), 0.05);
+    }
+  }
+
+  // Sizes
+  &.small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  &.medium {
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+  }
+
+  &.large {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+
+  .icon {
+    font-size: 1.2em;
+  }
+}
+
+// Темная тема
+.dark {
+  .button.ghost {
+    color: var(--dark-text);
+
+    &:hover {
+      background: rgba(var(--dark-text), 0.05);
+    }
+  }
+}

@@ -1,15 +1,17 @@
-$breakpoints: (
-  mobile: 480px,
-  tablet: 768px,
-  desktop: 1024px,
-);
+// Color scheme
+$dark-text: #f5f5f5;
+$dark-bg: #1a1a1a;
+$primary: #7c3aed;
+$secondary: #10b981;
 
 :root {
-  --primary-color: #2ecc71;
-  --secondary-color: #3498db;
-  --text-color: #333;
-  --bg-color: #fff;
-  --dark-bg: #1a1a1a;
-  --dark-text: #f5f5f5;
-  --transition: all 0.3s ease;
+  --primary-color: #{$primary};
+  --secondary-color: #{$secondary};
+  --text-color: #2d3748;
+  --bg-color: #ffffff;
+  --dark-bg: #{$dark-bg};
+  --dark-text: #{$dark-text};
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --border-radius: 0.5rem;
+  --section-spacing: 8rem;
 }

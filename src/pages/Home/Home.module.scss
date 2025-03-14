@@ -1,0 +1,85 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+
+  &Content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  .textContent {
+    h1 {
+      @include gradient-text;
+      margin-bottom: 1.5rem;
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: var(--text-color);
+      opacity: 0.9;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      max-width: 600px;
+
+      @media (max-width: 1024px) {
+        justify-content: center;
+      }
+
+      .skill {
+        background: rgba(var(--primary-color), 0.1);
+        color: var(--primary-color);
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-size: 0.9rem;
+        border: 1px solid rgba(var(--primary-color), 0.3);
+      }
+    }
+  }
+
+  .avatar {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -20px;
+      background: linear-gradient(
+        45deg,
+        var(--primary-color),
+        var(--secondary-color)
+      );
+      border-radius: 50%;
+      z-index: -1;
+      opacity: 0.2;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      @include card-shadow;
+    }
+  }
+}

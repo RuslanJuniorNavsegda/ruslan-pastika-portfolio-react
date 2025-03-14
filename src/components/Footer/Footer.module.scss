@@ -1,0 +1,40 @@
+@import "../../styles/variables";
+
+.footer {
+  padding: 3rem 5%;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: var(--transition);
+
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    a {
+      color: var(--text-color);
+      font-size: 1.5rem;
+      transition: var(--transition);
+
+      &:hover {
+        color: var(--primary-color);
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  .info {
+    p {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  }
+}
