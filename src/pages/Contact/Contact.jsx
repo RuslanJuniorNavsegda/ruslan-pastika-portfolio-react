@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Button from "../../components/Button/Button";
 import styles from "./Contact.module.scss";
 
 export default function Contact() {
@@ -74,13 +75,9 @@ export default function Contact() {
                 />
               </div>
 
-              <motion.button
-                type="submit"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <Button variant="primary" size="large" type="submit">
                 Send Message
-              </motion.button>
+              </Button>
             </form>
           )}
         </motion.div>

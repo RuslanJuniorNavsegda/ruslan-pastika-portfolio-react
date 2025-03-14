@@ -7,6 +7,17 @@
   align-items: center;
   padding: 0 5%;
 
+  .actions {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+
   &Content {
     max-width: 1200px;
     margin: 0 auto;
