@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
 import "./App.scss";
+import Experience from "./pages/Experience/Experience";
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/experience" element={<Experience />} />
         </Routes>
       </main>
       <Footer />
