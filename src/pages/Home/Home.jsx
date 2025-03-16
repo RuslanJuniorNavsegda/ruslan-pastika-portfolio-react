@@ -57,7 +57,10 @@ export default function Home() {
           animate={{ opacity: 1, x: 0 }}
           className={styles.avatar}
         >
-          <img src="/avatar.jpg" alt="Developer Avatar" />
+          <img
+            src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=400"
+            alt="Руслан Пастика"
+          />
         </motion.div>
       </div>
     </section>

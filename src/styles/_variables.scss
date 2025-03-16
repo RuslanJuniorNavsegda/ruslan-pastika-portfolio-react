@@ -7,6 +7,7 @@ $secondary: #10b981;
 :root {
   --primary-color: #{$primary};
   --secondary-color: #{$secondary};
+  --accent-color: #c0c0c0;
   --text-color: #2d3748;
   --bg-color: #ffffff;
   --dark-bg: #{$dark-bg};
@@ -14,4 +15,5 @@ $secondary: #10b981;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --border-radius: 0.5rem;
   --section-spacing: 8rem;
+  --texture: url("https://www.transparenttextures.com/patterns/always-grey.png");
 }

@@ -7,7 +7,7 @@ export const blogPosts = [
     tags: ["React", "Оптимизация", "Производительность"],
     excerpt: "Лучшие практики для ускорения вашего React-приложения...",
     content: "Полный текст статьи...",
-    image: "/blog-images/perf-optimization.jpg",
+    image: "https://images.unsplash.com/photo-1581276879432-15e50529f34b",
     readTime: "8 мин",
   },
   {
@@ -18,7 +18,7 @@ export const blogPosts = [
     tags: ["TypeScript", "Рефакторинг"],
     excerpt: "Пошаговое руководство по миграции с JavaScript...",
     content: "Полный текст статьи...",
-    image: "/blog-images/typescript-migration.jpg",
+    image: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef",
     readTime: "12 мин",
   },
 ];

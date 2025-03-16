@@ -1,10 +1,10 @@
 export const experienceData = [
   {
     id: 1,
-    company: "Tech Innovators Inc",
+    company: "Golden System",
     position: "Senior Frontend Developer",
     dates: "2020 - Present",
-    logo: "/logos/tech-innovators.png",
+    logo: "https://img.freepik.com/free-vector/golden-elegant-logo-template_1051-2090.jpg",
     responsibilities: [
       "Led development of company's main SaaS product",
       "Implemented design system with React + Storybook",
@@ -18,7 +18,7 @@ export const experienceData = [
     company: "Digital Solutions Co",
     position: "Frontend Developer",
     dates: "2018 - 2020",
-    logo: "/logos/digital-solutions.png",
+    logo: "https://static.vecteezy.com/system/resources/previews/022/014/566/non_2x/ds-letter-logo-design-with-black-and-white-colors-vector.jpg",
     responsibilities: [
       "Developed customer-facing e-commerce platform",
       "Integrated with REST APIs",
