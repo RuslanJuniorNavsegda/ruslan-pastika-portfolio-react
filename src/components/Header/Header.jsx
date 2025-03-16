@@ -19,6 +19,7 @@ export default function Header({ darkMode, setDarkMode }) {
           <Link to="/projects">Projects</Link>
           <Link to="/contact">Contact</Link>
           <Link to="/experience">Experience</Link>
+          <Link to="/blog">Блог</Link>
           <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
         </div>
       </nav>
