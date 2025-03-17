@@ -2,111 +2,168 @@
 @import "../../styles/mixins";
 
 .services {
-  padding: 4rem 0;
-  background: rgba(var(--bg-color), 0.95);
+  padding: 6rem 0;
+  background: rgba(var(--bg-color), 0.98);
 
   .container {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 0 5%;
+    padding: 0 2rem;
   }
 
   .title {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
     @include gradient-text;
   }
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 3rem;
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .card {
     @include card-shadow;
-    padding: 2rem;
-    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
     background: var(--bg-color);
+    border: 1px solid rgba(var(--primary-color), 0.1);
     transition: var(--transition);
-    border: 1px solid rgba(var(--text-color), 0.1);
     position: relative;
-    overflow: hidden;
 
     &:hover {
-      transform: translateY(-5px);
+      transform: translateY(-0.5rem);
+      box-shadow: 0 15px 40px -15px rgba(var(--primary-color), 0.15);
+    }
+  }
 
-      &::before {
-        transform: scale(1);
-      }
+  .serviceHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h3 {
+      color: var(--text-color);
+      margin: 1rem 0 0;
+      font-size: 1.8rem;
+    }
+  }
+
+  .iconWrapper {
+    @include flex-center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: rgba(var(--primary-color), 0.1);
+    color: var(--primary-color);
+    font-size: 2.5rem;
+  }
+
+  .subsections {
+    border-top: 2px solid rgba(var(--primary-color), 0.1);
+    padding-top: 2rem;
+  }
+
+  .subsection {
+    margin-bottom: 2rem;
+    position: relative;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    transition: background 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(var(--primary-color), 0.05);
     }
 
-    &::before {
+    h4 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  .popup {
+    position: absolute;
+    z-index: 100;
+    bottom: calc(100% + 1rem);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    background: var(--bg-color);
+    @include card-shadow;
+    border-radius: 1rem;
+    padding: 1.5rem;
+
+    &::after {
       content: "";
       position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(
-        45deg,
-        transparent,
-        rgba(var(--primary-color), 0.1)
-      );
-      transform: scale(0);
-      transition: var(--transition);
-      z-index: 0;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 10px solid transparent;
+      border-top-color: var(--bg-color);
     }
   }
 
-  .icon {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 1;
-    color: var(--primary-color);
-
-    svg {
-      width: 1em;
-      height: 1em;
+  .popupContent {
+    h5 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
     }
-  }
 
-  h3 {
-    color: var(--text-color);
-    margin-bottom: 1rem;
-    position: relative;
-    z-index: 1;
-  }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 0 1.5rem;
 
-  .description {
-    opacity: 0.9;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 1;
-  }
+      li {
+        padding: 0.4rem 0;
+        font-size: 0.95rem;
+        position: relative;
+        padding-left: 1.2rem;
 
-  .features {
-    list-style: none;
-    padding-left: 0;
-    position: relative;
-    z-index: 1;
-
-    li {
-      padding: 0.5rem 0;
-      display: flex;
-      align-items: center;
-      position: relative;
-
-      &::before {
-        content: "";
-        width: 8px;
-        height: 8px;
-        background: var(--primary-color);
-        border-radius: 50%;
-        margin-right: 0.8rem;
-        flex-shrink: 0;
+        &::before {
+          content: "•";
+          color: var(--primary-color);
+          position: absolute;
+          left: 0;
+        }
       }
     }
+  }
+
+  .meta {
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+  }
+
+  .techTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+
+    span {
+      padding: 0.3rem 0.8rem;
+      border-radius: 1rem;
+      background: rgba(var(--primary-color), 0.1);
+      color: var(--primary-color);
+      font-size: 0.8rem;
+    }
+  }
+
+  .ctaButton {
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: center;
   }
 }

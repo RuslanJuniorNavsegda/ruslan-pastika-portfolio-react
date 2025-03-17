@@ -4,40 +4,70 @@ export const services = [
   {
     id: 1,
     title: "Разработка веб-приложений",
-    description: "Создание современных и производительных веб-приложений",
-    features: [
-      "Интерактивные интерфейсы на React",
-      "Интеграция с REST API",
-      "Оптимизация производительности",
-      "Тестирование (Unit/E2E)",
+    icon: <FaCode />,
+    subsections: [
+      {
+        title: "Корпоративные системы",
+        details: [
+          "Интеграция с 1С и ERP-системами",
+          "Многоуровневая система безопасности",
+          "Автоматизация бизнес-процессов",
+          "Дашборды аналитики в реальном времени",
+        ],
+        duration: "2-6 месяцев",
+        features: ["React", "Redux", "WebSocket", "REST API"],
+      },
+      {
+        title: "Пользовательские решения",
+        details: [
+          "Интерактивные веб-редакторы",
+          "Социальные платформы",
+          "Системы голосования",
+          "Персонализированные ленты",
+        ],
+        duration: "1-3 месяца",
+        features: ["Next.js", "Firebase", "WebRTC"],
+      },
+      {
+        title: "Интеграции",
+        details: [
+          "Платежные системы (Stripe, PayPal)",
+          "Сервисы аутентификации",
+          "Сторонние API",
+          "Микросервисная архитектура",
+        ],
+        duration: "2-4 недели",
+        features: ["Node.js", "GraphQL", "Docker"],
+      },
     ],
-    icon: <FaCode className="icon" />,
-    color: "#2ecc71",
   },
   {
     id: 2,
     title: "Мобильные приложения",
-    description: "Кроссплатформенные решения с React Native",
-    features: [
-      "Нативные возможности",
-      "Push-уведомления",
-      "Оффлайн-режим",
-      "Публикация в сторах",
+    icon: <FaMobileAlt />,
+    subsections: [
+      {
+        title: "Кроссплатформенные",
+        details: [
+          "React Native разработка",
+          "Нативные модули",
+          "Оптимизация производительности",
+          "Оффлайн-функционал",
+        ],
+        duration: "3-6 месяцев",
+        features: ["React Native", "Expo", "TypeScript"],
+      },
+      {
+        title: "Публикация",
+        details: [
+          "App Store Optimization",
+          "Google Play настройка",
+          "Непрерывная интеграция",
+          "Тестовые сборки",
+        ],
+        duration: "1-2 недели",
+        features: ["Fastlane", "TestFlight", "CI/CD"],
+      },
     ],
-    icon: <FaMobileAlt className="icon" />,
-    color: "#3498db",
-  },
-  {
-    id: 3,
-    title: "Веб-сайты",
-    description: "Адаптивные и SEO-оптимизированные сайты",
-    features: [
-      "Современный дизайн",
-      "Анимации",
-      "CMS интеграция",
-      "Техническая поддержка",
-    ],
-    icon: <FaGlobe className="icon" />,
-    color: "#9b59b6",
   },
 ];
