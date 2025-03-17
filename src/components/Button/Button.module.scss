@@ -9,17 +9,28 @@
   font-weight: 600;
   transition: var(--transition);
   border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+
+  .content {
+    position: relative;
+    z-index: 1;
+  }
 
   // Variants
   &.primary {
-    background: var(--primary-color);
+    background: linear-gradient(
+      45deg,
+      var(--primary-color),
+      var(--secondary-color)
+    );
     color: white;
 
     &:hover {
       background: linear-gradient(
         45deg,
-        var(--primary-color),
-        var(--secondary-color)
+        rgba(var(--primary-color), 0.9),
+        rgba(var(--secondary-color), 0.9)
       );
     }
   }
@@ -61,10 +72,17 @@
 
   .icon {
     font-size: 1.2em;
+    display: flex;
+  }
+
+  .iconRight {
+    margin-left: 0.8rem;
+    font-size: 1.1em;
+    display: flex;
   }
 }
 
-// Темная тема
+// Dark theme
 .dark {
   .button.ghost {
     color: var(--dark-text);

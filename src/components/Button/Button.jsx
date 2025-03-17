@@ -5,7 +5,8 @@ const Button = ({
   children,
   variant = "primary",
   size = "medium",
-  icon: Icon,
+  icon: IconComponent,
+  iconRight: IconRightComponent,
   ...props
 }) => (
   <motion.button
@@ -14,8 +15,9 @@ const Button = ({
     whileTap={{ scale: 0.95 }}
     {...props}
   >
-    {Icon && <Icon className={styles.icon} />}
-    {children}
+    {IconComponent && <IconComponent className={styles.icon} />}
+    <span className={styles.content}>{children}</span>
+    {IconRightComponent && <IconRightComponent className={styles.iconRight} />}
   </motion.button>
 );
 

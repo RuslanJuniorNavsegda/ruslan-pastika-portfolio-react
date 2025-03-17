@@ -4,19 +4,8 @@
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   padding: 0 5%;
-
-  .actions {
-    display: flex;
-    gap: 1.5rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
-
-    @media (max-width: 768px) {
-      justify-content: center;
-    }
-  }
 
   &Content {
     max-width: 1200px;
@@ -25,6 +14,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    padding: 4rem 0;
 
     @media (max-width: 1024px) {
       grid-template-columns: 1fr;
@@ -36,6 +26,11 @@
     h1 {
       @include gradient-text;
       margin-bottom: 1.5rem;
+      font-size: 3.5rem;
+
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+      }
     }
 
     .tagline {
@@ -43,6 +38,17 @@
       margin-bottom: 2rem;
       color: var(--text-color);
       opacity: 0.9;
+    }
+
+    .actions {
+      display: flex;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+
+      @media (max-width: 768px) {
+        justify-content: center;
+      }
     }
 
     .skills {
@@ -92,5 +98,46 @@
       border-radius: 50%;
       @include card-shadow;
     }
+  }
+
+  .sectionPreview {
+    max-width: 1200px;
+    margin: 4rem auto 0;
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    border-top: 1px solid rgba(var(--text-color), 0.1);
+
+    @media (max-width: 768px) {
+      padding: 2rem 0;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .previewContainer {
+    background: rgba(var(--bg-color), 0.95);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    @include card-shadow;
+    border: 1px solid rgba(var(--text-color), 0.1);
+    transition: var(--transition);
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+  }
+
+  .previewText {
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    min-height: 72px;
   }
 }

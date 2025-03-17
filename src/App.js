@@ -9,6 +9,7 @@ import "./App.scss";
 import Experience from "./pages/Experience/Experience";
 import Blog from "./pages/Blog/Blog";
 import BlogPost from "./pages/Blog/BlogPost/BlogPost";
+import Services from "./pages/Services/Services";
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:postId" element={<BlogPost />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
       </main>
       <Footer />
